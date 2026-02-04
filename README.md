@@ -1,5 +1,5 @@
 # movie-chatbot
-# 🎬 Movie Chatbot – LSTM with Attention + RAG
+# Movie Chatbot – LSTM with Attention + RAG
 
 This project implements a **movie question-answering chatbot** using a custom-trained **LSTM language model with self-attention**, combined with a **Retrieval-Augmented Generation (RAG)** pipeline over structured movie data.
 
