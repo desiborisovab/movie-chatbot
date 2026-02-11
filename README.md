@@ -46,11 +46,26 @@ The core language model is a **next-token prediction model** trained on movie te
 
 ## Neural Network Architecture
 
-```python
-inputs = layers.Input(shape=(SEQ_LEN,))
-x = layers.Embedding(vocab_size, 256)(inputs)
-lstm_out = layers.LSTM(512, return_sequences=True)(x)
-attn_out = layers.Attention()([lstm_out, lstm_out])
-x = layers.Concatenate()([lstm_out, attn_out])
-x = layers.Dropout(0.2)(x)
-outputs = layers.Dense(vocab_size)(x)
+Embedding → token vectors
+LSTM → temporal memory
+Attention → re-focus on important tokens
+Concatenate → merge memory + attention
+Dense → next-token logits
+
+## Training Data
+
+Wiki Movie Plots
+Table: default.wiki_movie_plots_deduped
+Cornell Movie Dialogs
+Tables:
+workspace.default.movie_lines
+workspace.default.movie_conversations
+
+---
+
+## Inference – RAG Pipeline
+
+Question → keyword retrieval
+Build structured context
+Inject into prompt
+Generate answer token-by-token
