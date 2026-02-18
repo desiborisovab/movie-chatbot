@@ -1,0 +1,14 @@
+{
+  "VOCAB_SIZE": 20000,
+  "SEQ_LEN": 128,
+  "BATCH_SIZE": 128,
+  "STRIDE": 32,
+  "EMBED_DIM": 256,
+  "LSTM_UNITS": 512,
+  "DROPOUT": 0.3,
+  "STEPS_PER_EPOCH": 500,
+  "VAL_STEPS": 50,
+  "EPOCHS": 10,
+  "MLFLOW_EXPERIMENT_PATH": "/Users/desiborisovab@gmail.com/movie_chatbot_experiment",
+  "RUN_NAME": "lstm_attention_movie_lm"
+}
