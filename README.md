@@ -1,7 +1,12 @@
-# Movie Chatbot
+# CinemaScribe
 
-LSTM + Attention language model trained on Wikipedia movie plots.
-Retrieves a matching movie from the database and generates a plot continuation.
+A movie plot generation system built with an LSTM + Attention language model
+trained on Wikipedia movie plots. Given a search query, CinemaScribe finds the
+closest matching movie in the database and generates a plot-style continuation
+in the voice of that film.
+
+> **What it is:** a retrieval + generation pipeline
+> **What it is not:** a question-answering chatbot
 
 ---
 
